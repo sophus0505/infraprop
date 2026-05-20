@@ -88,7 +88,9 @@ class G2Sprofile:
 
         if len(existing_dates) > 0:
             print(f"Existing dates: {existing_dates}")
-            raise Warning("Some profiles already exist for this location in the requested time window.")
+            print(f"RETURNING without creating new profiles...")
+            return 
+            # raise Warning("Some profiles already exist for this location in the requested time window.")
 
         cmd = [
             "ncpag2s.py",

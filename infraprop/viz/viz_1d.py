@@ -1,3 +1,4 @@
+from datetime import UTC
 import os
 import subprocess
 
@@ -371,6 +372,8 @@ if __name__ == "__main__":
         "IS31": (50.41, 58.03),
         "IS43": (56.71, 37.22),
         "IS48": (35.80, 9.32),
+        "IS37": (69, 18.6),
+        "Plesetsk": (62.93, 40.58),
     }
 
     latlons = {
@@ -378,16 +381,19 @@ if __name__ == "__main__":
         "GRDI": (50.5993, 29.4471),
         "KPDI": (48.5630, 26.4562),
     }
-    src_loc = locations["teheran"]
+    # src_loc = locations["teheran"]
+    src_loc = locations["Plesetsk"]
+    rcv_loc = locations["IS37"]
     # src_loc = latlons["MAAG"]
     # rcv_loc = latlons["KPDI"]
     # rcv_loc = locations["IS19"]
-    rcv_loc = locations["IS31"]
+    # rcv_loc = locations["IS31"]
     # rcv_loc = locations["IS43"]
     # rcv_loc = locations["IS48"]
     
-    date = UTCDateTime("2026-04-01T12:00")
-    date = UTCDateTime("2026-04-08T12:00")
+    # date = UTCDateTime("2026-04-01T12:00")
+    # date = UTCDateTime("2026-04-08T12:00")
+    date = UTCDateTime("2026-05-12T08:15")
     # date = UTCDateTime("2022-03-01T00:00:00")
     tmp_atm_dir = "/staff/sophus/packages/infraview/data/tmp_atmos_dir/"
     freq = 0.5
